@@ -3,7 +3,7 @@ class CLI
     def start
         puts "Welcome to Breaking Bad! What is your name?"
         input = user_input
-
+        greet(input)
     end
 
     def user_input
