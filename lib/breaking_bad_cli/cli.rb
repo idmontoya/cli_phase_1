@@ -22,7 +22,7 @@ class CLI
     def menu
         selection = user_input
         if selection == "list"
-            print_characters
+            list_characters
             menu 
             #print character
         elsif selection == "exit"
@@ -44,8 +44,8 @@ class CLI
     end
 
     def list_characters
-        Character.each.with_index(1) do |character, index|
-            puts "#{index}. #{character}"
+        Character.all.each.with_index(1) do |character, index|
+            puts "#{index}. #{character.name}"
         end
     end
 
