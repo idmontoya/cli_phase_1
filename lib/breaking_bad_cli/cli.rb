@@ -4,9 +4,9 @@ class CLI
         puts "-----------------------------------------------------------------"
         puts "Welcome to Breaking Bad character information! What is your name?"
         puts "-----------------------------------------------------------------"
-        #API.get_data
+        API.get_data
         input = user_input
-         greet(input)
+        greet(input)
         
     end
 
@@ -43,9 +43,8 @@ class CLI
         menu
     end
 
-    def print_characters
-        characters = ["char1", "char2", "char3"]
-        characters.each.with_index(1) do |character, index|
+    def list_characters
+        Character.each.with_index(1) do |character, index|
             puts "#{index}. #{character}"
         end
     end

@@ -7,3 +7,4 @@ require "bundler"
 Bundler.require
 
 require_all './lib/breaking_bad_cli'
+
