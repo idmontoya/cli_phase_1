@@ -1,10 +1,13 @@
 class CLI 
     
-    def start
-        puts "Welcome to Breaking Bad! What is your name?"
+    def run
+        puts "-----------------------------------------------------------------"
+        puts "Welcome to Breaking Bad character information! What is your name?"
+        puts "-----------------------------------------------------------------"
+        #API.get_data
         input = user_input
-        greet(input)
-        menu
+         greet(input)
+        
     end
 
     def user_input
@@ -12,13 +15,15 @@ class CLI
     end
 
     def greet(name)
-        puts "Hello #{name}, which Breaking Bad character do you want to learn about?"
+        puts "Hello #{name}, which Breaking Bad character do you want to learn about? Enter list to see list or enter exit to exit"
+        menu
     end
 
     def menu
-         selection = user_input
-        if selection == "b"
-            menu
+        selection = user_input
+        if selection == "list"
+            print_characters
+            menu 
             #print character
         elsif selection == "exit"
             goodbye
@@ -34,9 +39,18 @@ class CLI
     end
 
     def invalid
-        puts "Try again"
+        puts "Please try again."
         menu
     end
+
+    def print_characters
+        characters = ["char1", "char2", "char3"]
+        characters.each.with_index(1) do |character, index|
+            puts "#{index}. #{character}"
+        end
+    end
+
+    
 end   
     
     

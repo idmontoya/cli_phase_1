@@ -1,16 +1,15 @@
 class Character
 
-    attr_accessor :name, :occupation, :nickname, :portrayed
+    attr_accessor :name, :nickname, :portrayed
     @@all = []
     
-    def initialize(name, occupation, nickname, portrayed)
+    def initialize(name, nickname, portrayed)
         @name = name
-        @occupation = occupation
         @nickname = nickname
         @portrayed = portrayed
         save
     end
-
+    
     def save
         @@all << self
     end
