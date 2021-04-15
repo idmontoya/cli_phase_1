@@ -6,7 +6,7 @@ class API
         # :name, :nickname, :portrayed
         data.each do |character|
             Character.new(character)
-            binding.pry
+            #binding.pry
         end
         #binding.pry
     end

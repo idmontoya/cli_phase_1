@@ -53,12 +53,15 @@ class CLI
     def select_character
         puts "Please enter which character to learn about."
         selection = user_input
-        character_details(selection)
+        character = Character.find_by_selection(selection)
+        character_details(character)
     end
 
     def character_details(character)
-        puts "#{character}"
-        
+        puts "Name: #{character.name}"
+        puts "Nickname: #{character.nickname}"
+        puts "Portrayed: #{character.portrayed}"
+
     end
 end   
     

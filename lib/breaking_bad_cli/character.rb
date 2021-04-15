@@ -5,7 +5,7 @@ class Character
     
     def initialize(character_hash)
         character_hash.each do |key, value|
-            self.send("#{key}=", value)
+            self.send("#{key}=", value) if self.respond_to?("#{key}=")
         end
         save
     end
@@ -16,5 +16,11 @@ class Character
 
     def self.all
         @@all
+    end
+
+    def self.find_by_selection(character_name)
+        self.all.detect do |character|
+            character.name == character_name
+        end
     end
 end
