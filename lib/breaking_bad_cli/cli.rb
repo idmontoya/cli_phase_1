@@ -1,9 +1,13 @@
 class CLI 
     
     def run
+        puts ""
+        puts ""
         puts "-----------------------------------------------------------------"
         puts "Welcome to Breaking Bad character information! What is your name?"
         puts "-----------------------------------------------------------------"
+        puts ""
+        puts ""
         API.get_data
         input = user_input
         greet(input)
@@ -59,11 +63,13 @@ class CLI
 
     def character_details(character)
         puts ""
+        puts ""
         puts "---------------------------------"
         puts "Name: #{character.name}"
         puts "Nickname: #{character.nickname}"
         puts "Portrayed: #{character.portrayed}"
         puts "---------------------------------"
+        puts ""
         puts ""
     end
 end   
