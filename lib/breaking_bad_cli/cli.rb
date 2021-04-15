@@ -58,10 +58,13 @@ class CLI
     end
 
     def character_details(character)
+        puts ""
+        puts "---------------------------------"
         puts "Name: #{character.name}"
         puts "Nickname: #{character.nickname}"
         puts "Portrayed: #{character.portrayed}"
-
+        puts "---------------------------------"
+        puts ""
     end
 end   
     
