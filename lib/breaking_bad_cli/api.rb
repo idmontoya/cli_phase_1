@@ -5,8 +5,8 @@ class API
         data = JSON.parse(response.body)
         # :name, :nickname, :portrayed
         data.each do |character|
-            Character.new(character["name"], character["nickname"], character["portrayed"])
-            #binding.pry
+            Character.new(character)
+            binding.pry
         end
         #binding.pry
     end

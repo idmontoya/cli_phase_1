@@ -47,9 +47,19 @@ class CLI
         Character.all.each.with_index(1) do |character, index|
             puts "#{index}. #{character.name}"
         end
+        select_character
     end
 
-    
+    def select_character
+        puts "Please enter which character to learn about."
+        selection = user_input
+        character_details(selection)
+    end
+
+    def character_details(character)
+        puts "#{character}"
+        
+    end
 end   
     
     
