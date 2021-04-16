@@ -57,8 +57,14 @@ class CLI
     def select_character
         puts "Please enter which character to learn about."
         selection = user_input
-        character = Character.find_by_selection(selection)
+        if Character.find_by_selection(selection)
+            character = Character.find_by_selection(selection)
+        else 
+            character = selection
+        end
+        
         character_details(character)
+
     end
 
     def character_details(character)
