@@ -64,10 +64,13 @@ class CLI
         end
         
         character_details(character)
-
     end
 
     def character_details(character)
+        #binding.pry
+        if character == "exit"
+            goodbye
+        elsif character.class == Character
         puts ""
         puts ""
         puts "---------------------------------"
@@ -77,6 +80,11 @@ class CLI
         puts "---------------------------------"
         puts ""
         puts ""
+        puts "Enter list to see character list or exit to exit."
+
+        else
+            invalid
+        end
     end
 end   
     
