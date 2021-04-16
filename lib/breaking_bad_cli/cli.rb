@@ -19,7 +19,9 @@ class CLI
     end
 
     def greet(name)
+        puts ""
         puts "Hello #{name}, which Breaking Bad character do you want to learn about? Enter list to see list or enter exit to exit"
+        puts ""
         menu
     end
 
@@ -27,7 +29,7 @@ class CLI
         selection = user_input
         if selection == "list"
             list_characters
-            menu 
+            #menu 
             #print character
         elsif selection == "exit"
             goodbye
@@ -43,7 +45,11 @@ class CLI
     end
 
     def invalid
+        puts ""
+        puts ""
         puts "Please try again."
+        puts ""
+        puts ""
         menu
     end
 
@@ -55,6 +61,7 @@ class CLI
     end
 
     def select_character
+        puts ""
         puts "Please enter which character to learn about."
         selection = user_input
         if Character.find_by_selection(selection)
@@ -73,11 +80,11 @@ class CLI
         elsif character.class == Character
         puts ""
         puts ""
-        puts "---------------------------------"
+        puts "-------------------------"
         puts "Name: #{character.name}"
         puts "Nickname: #{character.nickname}"
         puts "Portrayed: #{character.portrayed}"
-        puts "---------------------------------"
+        puts "-------------------------"
         puts ""
         puts ""
         puts "Enter list to see character list or exit to exit."
