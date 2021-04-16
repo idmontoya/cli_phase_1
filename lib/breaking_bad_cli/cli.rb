@@ -98,9 +98,10 @@ class CLI
         puts "Portrayed: #{character.portrayed}"
         puts "----------------------------------"
         puts ""
-        puts ""
+        puts "-------------------------------------------------"
         puts "Enter list to see character list or exit to exit."
-
+        puts "-------------------------------------------------"
+        puts ""
         else
             invalid
         end
