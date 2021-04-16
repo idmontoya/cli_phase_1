@@ -20,7 +20,10 @@ class CLI
 
     def greet(name)
         puts ""
-        puts "Hello #{name}, which Breaking Bad character do you want to learn about? Enter list to see list or enter exit to exit"
+        puts "-------------------------------------------------------------------"
+        puts "Hello #{name}, which Breaking Bad character do you want to learn about?" 
+        puts "Enter list to see list or enter exit to exit."
+        puts "-------------------------------------------------------------------"
         puts ""
         menu
     end
@@ -48,7 +51,7 @@ class CLI
         puts ""
         puts ""
         puts "Please try again."
-        puts ""
+        puts "Enter list to see list!"
         puts ""
         menu
     end
@@ -63,6 +66,7 @@ class CLI
     def select_character
         puts ""
         puts "Please enter which character to learn about."
+        puts ""
         selection = user_input
         if Character.find_by_selection(selection)
             character = Character.find_by_selection(selection)
