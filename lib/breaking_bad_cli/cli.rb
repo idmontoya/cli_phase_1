@@ -96,6 +96,7 @@ class CLI
         puts "Name: #{character.name}"
         puts "Nickname: #{character.nickname}"
         puts "Portrayed: #{character.portrayed}"
+        puts "Occupation: #{character.occupation}"
         puts "----------------------------------"
         puts ""
         puts "-------------------------------------------------"
