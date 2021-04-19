@@ -22,7 +22,7 @@ class CLI
         puts "-------------------------------------------------------------------"
         puts "Hello #{name}, which Breaking Bad character do you want to learn about?"
         puts "" 
-        puts "Enter list to see list or enter exit to exit."
+        puts "Enter 'm' for list or enter 'x' to exit."
         puts "-------------------------------------------------------------------"
         puts ""
         menu
@@ -30,11 +30,11 @@ class CLI
 
     def menu
         selection = user_input
-        if selection == "list"
+        if selection == "m"
             list_characters
             menu 
             #print character
-        elsif selection == "exit"
+        elsif selection == "x"
             goodbye
             #exit application
         else
@@ -56,7 +56,7 @@ class CLI
         puts "-----------------------"
         puts "Please try again."
         puts ""
-        puts "Enter list to see list!"
+        puts "Enter 'm' to see list!"
         puts "-----------------------"
         puts ""
         menu
@@ -75,7 +75,7 @@ class CLI
         puts "-------------------------------------------------"
         puts "Please enter the character's name to learn about."
         puts ""
-        puts "Enter list to see list or exit to exit."
+        puts "Enter 'm' for list or 'x' to exit."
         puts "-------------------------------------------------"
         puts ""
         puts ""
@@ -107,7 +107,7 @@ class CLI
         puts ""
         puts ""
         puts "-------------------------------------------------"
-        puts "Enter list to see character list or exit to exit."
+        puts "Enter 'm' for list or 'x' to exit."
         puts "-------------------------------------------------"
         puts ""
         puts ""
