@@ -45,9 +45,9 @@ class CLI
 
     def goodbye
         puts ""
-        puts "----------------"
-        puts "Have a nice day!"
-        puts "----------------"
+        puts "----------------------------------------"
+        puts "Have a great day! Hope to see you again!"
+        puts "----------------------------------------"
         puts ""
     end
 
