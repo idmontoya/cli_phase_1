@@ -1,6 +1,6 @@
 class Character
 
-    attr_accessor :name, :nickname, :portrayed, :occupation, :appearance
+    attr_accessor :name, :nickname, :portrayed, :occupation, :appearance, :img
     @@all = []
     
     def initialize(character_hash)
