@@ -7,7 +7,6 @@ class CLI
         puts "Welcome to Breaking Bad character information! What is your name?"
         puts "-----------------------------------------------------------------"
         puts ""
-        puts ""
         API.get_data
         input = user_input
         greet(input)
@@ -73,11 +72,11 @@ class CLI
     def select_character
         puts ""
         puts ""
-        puts "--------------------------------------------"
-        puts "Please enter which character to learn about."
+        puts "-------------------------------------------------"
+        puts "Please enter the character's name to learn about."
         puts ""
         puts "Enter list to see list or exit to exit."
-        puts "--------------------------------------------"
+        puts "-------------------------------------------------"
         puts ""
         puts ""
         selection = user_input
